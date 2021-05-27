@@ -33,11 +33,17 @@ public class Solution {
                 dig.add(integer);
 
             }
-
-            Collections.sort(dig);
+            System.out.println("Вывод без сортировки");
             for (Integer out : dig
             ) {
-                System.out.println(out);
+                System.out.print(out+"  ");
+            }
+            Collections.reverse(dig);
+
+            System.out.println("\nВывод с обратной сортировкой");
+            for (Integer out : dig
+            ) {
+                System.out.print(out+"  ");
             }
         }
         catch (IllegalArgumentException exception){
