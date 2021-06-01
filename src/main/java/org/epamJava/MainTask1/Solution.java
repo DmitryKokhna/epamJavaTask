@@ -2,6 +2,7 @@ package org.epamJava.MainTask1;
 
 import java.util.Scanner;
 
+
 /**
  * Задача 1 - Main
  *    Приветствовать любого пользователя при вводе его имени через командную строку.
