@@ -81,8 +81,20 @@ public class Solution {
                     break;
                 default:
                     System.out.println("\tВведено число вне диапазона");
+
             }
-        } catch (ArrayIndexOutOfBoundsException arrayIndexOutOfBoundsException) {
+
+            if (numberOfMonthInArray==1||numberOfMonthInArray==2||numberOfMonthInArray==12) {
+                System.out.println("Сезон - Зима");
+            } else if (numberOfMonthInArray >= 3 && numberOfMonthInArray <= 5) {
+                    System.out.println("Сезон - Весна");
+                } else if (numberOfMonthInArray >= 6 && numberOfMonthInArray <= 8) {
+                        System.out.println("Сезон - Лето");
+                    } else if (numberOfMonthInArray >= 9 && numberOfMonthInArray <= 11) {
+                            System.out.println("Сезон - Осень");
+                        }
+        }
+        catch (ArrayIndexOutOfBoundsException arrayIndexOutOfBoundsException) {
             System.out.println("\tВведено число вне диапазона");
         } catch (IllegalFormatException illegalFormatException) {
             System.out.println("\tВведено не числовое значение");
