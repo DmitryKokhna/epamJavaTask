@@ -63,7 +63,7 @@ int lengthOfMinDig=String.valueOf(arrayOfDigits[0]).length();
         while(!isSorted) {
             isSorted = true;
             for (int i = 0; i < arrayOfDigits.length-1; i++) {
-                if(String.valueOf(arrayOfDigits[i]).length() > String.valueOf(arrayOfDigits[i+1]).length()){
+                if(String.valueOf(Math.abs(arrayOfDigits[i])).length() > String.valueOf(Math.abs(arrayOfDigits[i+1])).length()){
                     isSorted = false;
                     buf = arrayOfDigits[i];
                     arrayOfDigits[i] = arrayOfDigits[i+1];
@@ -72,15 +72,15 @@ int lengthOfMinDig=String.valueOf(arrayOfDigits[0]).length();
                 }
             }
             for (int i = 0; i < arrayOfDigits.length; i++){
-                if(String.valueOf(arrayOfDigits[i]).length() < lengthOfMinDig){
-                    lengthOfMinDig=String.valueOf(arrayOfDigits[i]).length();
+                if(String.valueOf(Math.abs(arrayOfDigits[i])).length() < lengthOfMinDig){
+                    lengthOfMinDig=String.valueOf(Math.abs(arrayOfDigits[i])).length();
                     minDig=arrayOfDigits[i];
                 }
 
             }
             for (int i = 0; i < arrayOfDigits.length; i++){
-                if(String.valueOf(arrayOfDigits[i]).length() > lengthOfMaxDig){
-                    lengthOfMaxDig=String.valueOf(arrayOfDigits[i]).length();
+                if(String.valueOf(Math.abs(arrayOfDigits[i])).length() > lengthOfMaxDig){
+                    lengthOfMaxDig=String.valueOf(Math.abs(arrayOfDigits[i])).length();
                    maxDig=arrayOfDigits[i];
                 }
             }
