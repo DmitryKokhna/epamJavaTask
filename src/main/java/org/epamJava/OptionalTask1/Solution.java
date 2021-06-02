@@ -41,7 +41,7 @@ for (int i=0;i<arrayOfDigits.length;i++){
     }
 }
 
-        //1.     Найти самое короткое и самое длинное число. Вывести найденные числа и их длину.
+        //2.     Вывести числа в порядке возрастания (убывания) значений их длины.
 
         System.out.println("\tЭто массив");
         for (int s: arrayOfDigits
@@ -53,26 +53,41 @@ for (int i=0;i<arrayOfDigits.length;i++){
 
        //сортировка
             int buf;
-        int lengthOfDigit=String.valueOf(arrayOfDigits[0]).length();
-        int lengthOfDigit2=String.valueOf(arrayOfDigits[1]).length();
-        System.out.println(lengthOfDigit+" это первый");
-        System.out.println(lengthOfDigit2 + " это второй");
 
         boolean isSorted = false;
+int minDig=arrayOfDigits[0];
+int lengthOfMinDig=String.valueOf(arrayOfDigits[0]).length();
+        int maxDig=arrayOfDigits[0];
+        int lengthOfMaxDig=String.valueOf(arrayOfDigits[0]).length();
 
         while(!isSorted) {
             isSorted = true;
             for (int i = 0; i < arrayOfDigits.length-1; i++) {
                 if(String.valueOf(arrayOfDigits[i]).length() > String.valueOf(arrayOfDigits[i+1]).length()){
                     isSorted = false;
-
                     buf = arrayOfDigits[i];
                     arrayOfDigits[i] = arrayOfDigits[i+1];
                     arrayOfDigits[i+1] = buf;
+
+                }
+            }
+            for (int i = 0; i < arrayOfDigits.length; i++){
+                if(String.valueOf(arrayOfDigits[i]).length() < lengthOfMinDig){
+                    lengthOfMinDig=String.valueOf(arrayOfDigits[i]).length();
+                    minDig=arrayOfDigits[i];
+                }
+
+            }
+            for (int i = 0; i < arrayOfDigits.length; i++){
+                if(String.valueOf(arrayOfDigits[i]).length() > lengthOfMaxDig){
+                    lengthOfMaxDig=String.valueOf(arrayOfDigits[i]).length();
+                   maxDig=arrayOfDigits[i];
                 }
             }
         }
         System.out.println(Arrays.toString(arrayOfDigits));
+        System.out.println("Самое короткое число - " + minDig+ " и его размерность " + lengthOfMinDig);
+        System.out.println("Самое длинное число - " + maxDig+ " и его размерность " + lengthOfMaxDig);
 
     }
 }
