@@ -40,6 +40,8 @@ Thread.sleep(400);
             for (int j = 0; j < matrix[i].length; j++){
             matrix[i][j]=(int)(Math.random()*(maxBorder-minBorder)-minBorder);
         }}
+
+        System.out.println("Сформированная матрица");
         for (int[] a: matrix
              ) {
             for (int s: a
@@ -49,6 +51,39 @@ Thread.sleep(400);
             System.out.println();
         }
 
+     //1.     Упорядочить строки (столбцы) матрицы в порядке возрастания значений элементов k-го столбца (строки).
+//i=0/j=0
+//        i=0/j=1
+//        i=0/j=2
+//        i=0/j=3
+
+                        boolean isSorted = false;
+                        int buf;
+                        while(!isSorted) {
+                            isSorted = true;
+                            for (int i = 0; i<matrixSize;) {
+                                for (int j=0;j<matrixSize-1;j++){
+                                if(matrix[i][j] > matrix[i][j+1]){
+                                    isSorted = false;
+
+                                    buf = matrix[i][j];
+                                    matrix[i][j] = matrix[i][j+1];
+                                    matrix[i][j+1] = buf;
+                                }
+                            }
+                                i++;
+                        }
+                    }
+
+        System.out.println("Итоговая матрица");
+        for (int[] a: matrix
+        ) {
+            for (int s: a
+            ) {
+                System.out.print(s+" ");
+            }
+            System.out.println();
+        }
         }
 
     }
