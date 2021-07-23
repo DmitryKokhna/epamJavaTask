@@ -1,4 +1,4 @@
-package org.epamJava.MainTask1;
+package org.epamJavaFundamentals.MainTask1;
 
 import junit.framework.TestCase;
 import org.junit.Test;
