@@ -1,4 +1,4 @@
-package org.epamJava.MainTask2;
+package org.epamJavaFundamentals.MainTask2;
 
 
 import java.io.BufferedReader;
