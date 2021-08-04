@@ -139,7 +139,7 @@ public class Student {
     public static void main(String[] args) {
         Student[] arrStudent=new Student[30];
         Student one=new Student(1, "Kokhna","Dima","Alekseev","Minsk","+375295658565","FES",2,"TE342");
-        Student two=new Student(one.setId();, );
+     //   Student two=new Student(one.setId();, );
         System.out.println(one.toString());
         one.setId(29);
         arrStudent[one.id]=one;
