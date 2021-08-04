@@ -1,6 +1,8 @@
 package org.epamJavaClasses.MainTask;
 
 
+import org.epamJavaFundamentals.MainTask1.Solution;
+
 /**
  * Создать классы, спецификации которых приведены ниже. Определить конструкторы и методы setТип(), getТип(), toString(). Определить дополнительно методы в классе, создающем массив объектов. Задать критерий выбора данных и вывести эти данные на консоль. В каждом классе, обладающем информацией, должно быть объявлено несколько конструкторов.
  * <p>
@@ -39,6 +41,8 @@ public class Student {
         YearOfStudy = yearOfStudy;
         Group = group;
     }
+
+
 
     public int getId() {
         return id;
@@ -130,5 +134,9 @@ public class Student {
     public static void main(String[] args) {
         Student[] arrStudent=new Student[30];
         Student one=new Student(1, "Kokhna","Dima","Alekseev","Minsk","+375295658565","FES",2,"TE342");
+arrStudent[0]=one;
+        System.out.println(one.toString());
     }
+
+
 }
