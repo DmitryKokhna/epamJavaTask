@@ -1,6 +1,11 @@
 package org.epamJavaClasses.MainTask1;
 
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.lang.reflect.Array;
+
 /**
  * Создать классы, спецификации которых приведены ниже. Определить конструкторы и методы setТип(), getТип(), toString(). Определить дополнительно методы в классе, создающем массив объектов. Задать критерий выбора данных и вывести эти данные на консоль. В каждом классе, обладающем информацией, должно быть объявлено несколько конструкторов.
  * <p>
@@ -40,11 +45,13 @@ public class Student {
         Faculty = faculty;
         YearOfStudy = yearOfStudy;
         Group = group;
+
+
     }
 
 
 
-    public int getId() {
+    public  int getId() {
         return id;
     }
 
@@ -52,39 +59,39 @@ public class Student {
         this.id = id;
     }
 
-    public String getSecondName() {
+    public  String getSecondName() {
         return SecondName;
     }
 
-    public void setSecondName(String secondName) {
+    public  void setSecondName(String secondName) {
         SecondName = secondName;
     }
 
-    public String getFirstName() {
+    public  String getFirstName() {
         return FirstName;
     }
 
-    public void setFirstName(String firstName) {
+    public  void setFirstName(String firstName) {
         FirstName = firstName;
     }
 
-    public String getPatronymic() {
+    public  String getPatronymic() {
         return Patronymic;
     }
 
-    public void setPatronymic(String patronymic) {
+    public  void setPatronymic(String patronymic) {
         Patronymic = patronymic;
     }
 
-    public String getAddress() {
+    public  String getAddress() {
         return Address;
     }
 
-    public void setAddress(String address) {
+    public  void setAddress(String address) {
         Address = address;
     }
 
-    public String getPhone() {
+    public  String getPhone() {
         return Phone;
     }
 
@@ -92,29 +99,31 @@ public class Student {
         this.Phone = phone;
     }
 
-    public String getFaculty() {
+    public  String getFaculty() {
         return Faculty;
     }
 
-    public void setFaculty(String faculty) {
+    public  void setFaculty(String faculty) {
         Faculty = faculty;
     }
 
-    public int getYearOfStudy() {
+    public  int getYearOfStudy() {
         return YearOfStudy;
     }
 
-    public void setYearOfStudy(int yearOfStudy) {
+    public  void setYearOfStudy(int yearOfStudy) {
         YearOfStudy = yearOfStudy;
     }
 
-    public String getGroup() {
+    public  String getGroup() {
         return Group;
     }
 
-    public void setGroup(String group) {
+    public  void setGroup(String group) {
         Group = group;
     }
+
+
 
     @Override
     public String toString() {
@@ -131,20 +140,49 @@ public class Student {
                 '}';
     }
 
-    public static void addStudent(Student student){
+    public static void main(String[] args) throws IOException {
 
+        System.out.println("Введите общее количество студентов");
+        BufferedReader bufferedReader=new BufferedReader(new InputStreamReader(System.in));
+        int setSize=Integer.parseInt(bufferedReader.readLine());
 
-    }
+        Student[] arrayOfStudent=new Student[setSize];
 
-    public static void main(String[] args) {
-        Student[] arrStudent=new Student[30];
-        Student one=new Student(1, "Kokhna","Dima","Alekseev","Minsk","+375295658565","FES",2,"TE342");
-     //   Student two=new Student(one.setId();, );
-        System.out.println(one.toString());
-        one.setId(29);
-        arrStudent[one.id]=one;
+        for (int i=0;i<setSize;i++){
+     //ввоим ID
+    System.out.println("введите ID студента");
+    int setId = Integer.parseInt(bufferedReader.readLine());
+    // вводим Фамилию
+    System.out.println("введите Фамилию студента");
+   String setSecondName=bufferedReader.readLine();
+    //вводим Имя
+    System.out.println("введите Имя студента");
+   String setFirstName=bufferedReader.readLine();
+    //вводим Отчество
+    System.out.println("введите Отчество студента");
+   String setPatronymic= bufferedReader.readLine();
+    //вводим Адрес
+    System.out.println("введите Адрес студента");
+   String setAddress=(bufferedReader.readLine());
+    //вводим Телефон
+    System.out.println("введите Телефон студента");
+   String setPhone=bufferedReader.readLine();
+    //вводим Факультет
+    System.out.println("введите Факультет студента");
+   String setFaculty=bufferedReader.readLine();
+    //вводим Год учебы
+    System.out.println("введите Год учебы студента");
+  int setYearOfStudy=Integer.parseInt(bufferedReader.readLine());
+    //вводим Группу
+    System.out.println("введите Группу студента");
+   String setGroup= bufferedReader.readLine();
 
-        System.out.println(one.toString());
+   Student student=new Student(setId,setSecondName,setFirstName,setPatronymic,setAddress,setPhone,setFaculty,setYearOfStudy,setGroup);
+
+   arrayOfStudent[i]=student;
+}
+
+        System.out.println(arrayOfStudent[1].toString());
     }
 
 
