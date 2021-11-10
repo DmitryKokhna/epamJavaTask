@@ -174,7 +174,7 @@ public class Student {
     System.out.println("введите Год учебы студента");
   int setYearOfStudy=Integer.parseInt(bufferedReader.readLine());
     //вводим Группу
-    System.out.println("введите Группу студента");
+    System.out.println("введите Группу студента ");
    String setGroup= bufferedReader.readLine();
 
    Student student=new Student(setId,setSecondName,setFirstName,setPatronymic,setAddress,setPhone,setFaculty,setYearOfStudy,setGroup);
@@ -184,6 +184,7 @@ public class Student {
 
         System.out.println(arrayOfStudent[1].toString());
     }
+
 
 
 }
