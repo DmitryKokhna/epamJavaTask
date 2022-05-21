@@ -7,7 +7,7 @@ public class SolutionTest extends TestCase {
     @Test
     public void testOutHello() {
 
-                  assertTrue( true);
+                  assertTrue(true);
               System.out.println("TeSt1 OK");
 
         }
